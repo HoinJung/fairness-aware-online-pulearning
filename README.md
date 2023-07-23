@@ -16,7 +16,7 @@ Run ```python main.py --model MODEL --dataset DATASET --r1 R1 --batch_size BATCH
 - BATCH_SIZE: the batch size for offline learning. The batch size will be set as a full batch in online learning.
 - EPOCH: the number of epochs for offline learning. The number of epochs will be set as 1 in online learning.
 - PU_TYPE: ```upu''' and ```nnpu```.
-- LR: ```lr=0.01``` is recommended for offline learning. ```lr=0.1, 0.5, 1.0``` is recommended for online learning.
+- LR: ```lr=0.01``` is recommended for offline learning. ```lr=0.01, 0.1, 1.0``` is recommended for online learning.
 - ROUND: The number of total rounds for online learning.
 - FAIRNESS_CONSTRAINT: fairness constraint to compute a fairness loss. ```ddp``` and ```deo``.
 - LAMBDA_F: a hyperparameter to weigh the fairness loss.
@@ -24,4 +24,4 @@ Run ```python main.py --model MODEL --dataset DATASET --r1 R1 --batch_size BATCH
 - FAIR: command ```--fair``` to use fairness loss. To execute the baseline, drop this command.
 
 ### Example
-```python main.py --model linear --dataset german --r1 0.1 --pu_type nnpu --lr 0.1 --round 20 --fairness ddp --online --fair --lam_f 0.1```
+```python main.py --model linear --dataset compas --r1 0.1 --pu_type nnpu --lr 0.1 --round 20 --fairness ddp --online --lam_f 0.1```
