@@ -27,7 +27,7 @@ if __name__ == '__main__':
     parser.add_argument('--r1', default=0.1, type=float)
     parser.add_argument('--batch_size', default=128, type=int)
     parser.add_argument('--epoch', default=200, type=int)
-    parser.add_argument('--num_exp', default=1, type=int)
+    parser.add_argument('--num_exp', default=20, type=int)
     parser.add_argument('--pu_type', default='nnpu', type=str)
     parser.add_argument('--opt', default='adam', type=str)
     parser.add_argument('--loss_type', default='dh', type=str)
