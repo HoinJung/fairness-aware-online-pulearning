@@ -9,7 +9,7 @@ Run ```sh data_prep.sh``` to create ```*.npz``` files for training. Each dataset
 
 Run ```python main.py --model MODEL --dataset DATASET --r1 R1 --batch_size BATCH_SIZE --epoch EPOCH --pu_type PU_TYPE --lr LR --round ROUND --fairness FAIRNESS_CONSTRAINT --online --fair --lam_f LAMBDA_F```
 
-#### Options
+### Options
 - MODEL: ```mlp``` and ```linear```.
 - DATASET: ```adult```, ```compas```, ```german```, ```drug```, ```bank```, and ```meps```.
 - R1: the ratio of unlabeled samples in positive instances.
@@ -23,5 +23,5 @@ Run ```python main.py --model MODEL --dataset DATASET --r1 R1 --batch_size BATCH
 - ONLINE: command ```--online``` to run online learning. To execute offline learning, drop this command.
 - FAIR: command ```--fair``` to use fairness loss. To execute the baseline, drop this command.
 
-#### example
+### Example
 ```python main.py --model linear --dataset german --r1 0.1 --pu_type nnpu --lr 0.1 --round 20 --fairness ddp --online --fair --lam_f 0.1```
