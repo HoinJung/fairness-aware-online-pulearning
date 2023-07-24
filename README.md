@@ -7,7 +7,10 @@ Run ```sh data_prep.sh``` to create ```*.npz``` files for training. Each dataset
 
 ## Training
 
-Run ```python main.py --model MODEL --dataset DATASET --r1 R1 --batch_size BATCH_SIZE --epoch EPOCH --pu_type PU_TYPE --lr LR --round ROUND --fairness FAIRNESS_CONSTRAINT --online --fair --lam_f LAMBDA_F```
+Run 
+```
+python main.py --model MODEL --dataset DATASET --r1 R1 --batch_size BATCH_SIZE --epoch EPOCH --pu_type PU_TYPE --lr LR --round ROUND --fairness FAIRNESS_CONSTRAINT --online --fair --lam_f LAMBDA_F
+```
 
 ### Options
 - MODEL: ```mlp``` and ```linear```.
@@ -24,4 +27,6 @@ Run ```python main.py --model MODEL --dataset DATASET --r1 R1 --batch_size BATCH
 - FAIR: command ```--fair``` to use fairness loss. To execute the baseline, drop this command.
 
 ### Example
-```python main.py --model linear --dataset compas --r1 0.1 --pu_type nnpu --lr 0.1 --round 20 --fairness ddp --online --lam_f 0.1 --fair```
+```
+python main.py --model linear --dataset compas --r1 0.1 --pu_type nnpu --lr 0.1 --round 20 --fairness ddp --online --lam_f 0.1 --fair
+```
